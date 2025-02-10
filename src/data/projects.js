@@ -2,13 +2,25 @@ const myProjects = [
     {
         id: 1,
         title: 'Multi-Functional Calculator',
-        image: '/images/Calculator.png', // This will look for public/images/calc.png
+        images: [
+            '/images/Multi-functional-Calculator/Calculator.png',
+            '/images/Multi-functional-Calculator/cal1.png',
+            '/images/Multi-functional-Calculator/cal2.png',
+            '/images/Multi-functional-Calculator/cal3.png',
+            '/images/Multi-functional-Calculator/cal4.png',
+            '/images/Multi-functional-Calculator/cal5.png',
+            '/images/Multi-functional-Calculator/cal6.png',
+            '/images/Multi-functional-Calculator/cal7.png',
+
+        ],
         sourceUrl: 'https://github.com/YourUsername/CalculatorRepo',
         status: 'completed',
         description:
-            'A versatile calculator supporting standard arithmetic, scientific operations, and more.',
-        tools: ['React', 'JavaScript', 'CSS'],
-    },
+            'A versatile calculator offering basic arithmetic, advanced geometry, currency conversion, and scientific functions, built with HTML, CSS, and JavaScript.',
+        tools: ['HTML', 'CSS', 'JavaScript']
+    }
+,
+
     {
         id: 2,
         title: 'Real-Time Ticket Pool System',
