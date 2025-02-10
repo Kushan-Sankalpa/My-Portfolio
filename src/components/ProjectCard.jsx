@@ -7,31 +7,47 @@ const ProjectCard = ({ item }) => {
     const [showTooltip, setShowTooltip] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
 
+    // Open the GitHub repository in a new tab
     const handleSourceClick = (e) => {
         e.preventDefault();
         if (item.sourceUrl && item.sourceUrl !== '#') {
-            window.open(item.sourceUrl, '_blank');
+            window.open(item.sourceUrl, '_blank', 'noopener,noreferrer');
         }
     };
 
     return (
         <div className="work__card">
+            {/* Status badge – appears on hover */}
+            {item.status === 'completed' && (
+                <div className="project-status completed">
+                    <i className="uil uil-check-circle"></i> Completed
+                </div>
+            )}
+            {item.status === 'development' && (
+                <div className="project-status ongoing">
+                    <i className="uil uil-clock"></i> Ongoing
+                </div>
+            )}
+
             <img src={item.image} alt={item.title} className="work__img" />
             <h3 className="work__title">{item.title}</h3>
 
             <div className="work__button-container">
+                {/* GitHub source icon */}
                 <a
                     href="#"
                     className="work__button"
                     onClick={handleSourceClick}
-                    onMouseEnter={() => item.status === 'development' && setShowTooltip(true)}
+                    onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
+                    title="View Source on GitHub"
                 >
-                    <i className="bx bxl-github work__button-icon" /> Source
+                    <i className="bx bxl-github work__button-icon"></i>
                 </a>
                 {showTooltip && item.status === 'development' && (
                     <div className="work__tooltip">Under Development</div>
                 )}
+                {/* "View More" button triggers the popup modal */}
                 <button
                     className="work__button pop-view-more-button"
                     onClick={() => setShowPopup(true)}

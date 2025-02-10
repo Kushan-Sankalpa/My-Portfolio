@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import  { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Typed from 'typed.js';
 import ScrollReveal from 'scrollreveal';
 import ProjectCard from '../components/ProjectCard';
@@ -31,7 +31,7 @@ const Home = () => {
             backDelay: 2000,
         });
 
-        // SCROLL REVEAL
+        // SCROLL REVEAL configuration
         const sr = ScrollReveal({
             origin: 'top',
             distance: '80px',
@@ -44,7 +44,8 @@ const Home = () => {
         sr.reveal('.featured-text-btn', { delay: 200 });
         sr.reveal('.social_icons', { delay: 200 });
         sr.reveal('.featured-image', { delay: 300 });
-        sr.reveal('.project-box', { interval: 200 });
+        // Reveal the project cards from the bottom
+        sr.reveal('.work__card', { origin: 'bottom', delay: 300, interval: 200 });
         sr.reveal('.top-header', {});
 
         const srLeft = ScrollReveal({
@@ -86,7 +87,6 @@ const Home = () => {
         }
         window.addEventListener('scroll', scrollActive);
 
-        // Cleanup
         return () => {
             typed.destroy();
             window.removeEventListener('scroll', headerShadow);
@@ -109,8 +109,8 @@ const Home = () => {
                     </div>
                     <div className="featured-text-info">
                         <p>
-                            Experienced frontend developer with a passion for creating visually stunning
-                            and user-friendly websites.
+                            Experienced frontend developer with a passion for creating visually stunning and
+                            user-friendly websites.
                         </p>
                     </div>
                     <div className="featured-text-btn">
@@ -131,9 +131,15 @@ const Home = () => {
                         <div className="icon">
                             <i className="uil uil-dribbble"></i>
                         </div>
-                        <div className="icon">
-                            <i className="uil uil-github-alt"></i>
-                        </div>
+                        <a
+                            href="https://github.com/YourUsername"  /* Replace with your GitHub URL */
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="icon">
+                                <i className="uil uil-github-alt"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div className="featured-image">
@@ -159,10 +165,9 @@ const Home = () => {
                         <div className="about-info">
                             <h3>My introduction</h3>
                             <p>
-                                I am well-versed in HTML, CSS and JavaScript, and other cutting edge
-                                frameworks and libraries, which allows me to implement interactive features.
-                                Additionally, I have experience working with content management systems (CMS) like
-                                WordPress.
+                                I am well-versed in HTML, CSS and JavaScript, and other cutting edge frameworks and
+                                libraries, which allows me to implement interactive features. Additionally, I have
+                                experience working with content management systems (CMS) like WordPress.
                             </p>
                             <div className="about-btn">
                                 <button className="btn">
@@ -227,7 +232,7 @@ const Home = () => {
             <section className="section" id="contact">
                 <div className="top-header">
                     <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me here</span>
+                    <span>Do you have a project in your mind? Contact me here.</span>
                 </div>
                 <div className="row">
                     <div className="col">
@@ -239,7 +244,7 @@ const Home = () => {
                                 <i className="uil uil-envelope"></i> Email: kushansankalpa717@gmail.com
                             </p>
                             <p>
-                                <i className="uil uil-phone"></i> Tel: +94 77-351 6451
+                                <i className="uil uil-phone"></i> Tel: +250 708 770 000
                             </p>
                         </div>
                     </div>

@@ -3,7 +3,7 @@ const myProjects = [
     {
         id: 1,
         title: 'Multi-Functional Calculator',
-        image: '/images/calc.png',
+        image: '/images/Calculator.png',
         sourceUrl: 'https://github.com/YourUsername/CalculatorRepo',
         status: 'completed',
         description:
@@ -13,7 +13,7 @@ const myProjects = [
     {
         id: 2,
         title: 'Real-Time Ticket Pool System',
-        image: '/images/ticket.png',
+        image: '/images/Ticketpool.png',
         sourceUrl: 'https://github.com/YourUsername/TicketPoolSystem',
         status: 'development',
         description:
@@ -23,7 +23,7 @@ const myProjects = [
     {
         id: 3,
         title: 'Wali Pilla Sinhala Learning App',
-        image: '/images/walipilla.png',
+        image: '/images/Sinhala.png',
         sourceUrl: 'https://github.com/YourUsername/WaliPillaSinhalaApp',
         status: 'completed',
         description:
@@ -33,13 +33,15 @@ const myProjects = [
     {
         id: 4,
         title: 'Hotel Management System',
-        image: '/images/hotel.png',
+        image: '/images/Hotel.png',
         sourceUrl: 'https://github.com/YourUsername/HotelManagementSystem',
         status: 'completed',
         description:
             'A comprehensive hotel management platform featuring room reservations, staff scheduling, billing, and analytics dashboards for easy administration.',
         tools: ['Java', 'Spring Boot', 'MySQL'],
     },
+
+
 ];
 
 export default myProjects;
