@@ -1,23 +1,22 @@
-
 const myProjects = [
     {
         id: 1,
         title: 'Multi-Functional Calculator',
-        image: '/images/Calculator.png',
+        image: '/images/Calculator.png', // This will look for public/images/calc.png
         sourceUrl: 'https://github.com/YourUsername/CalculatorRepo',
         status: 'completed',
         description:
-            'A versatile calculator supporting standard arithmetic, scientific operations, and advanced functions such as matrix calculations and unit conversions.',
+            'A versatile calculator supporting standard arithmetic, scientific operations, and more.',
         tools: ['React', 'JavaScript', 'CSS'],
     },
     {
         id: 2,
         title: 'Real-Time Ticket Pool System',
-        image: '/images/Ticketpool.png',
+        images: ['/images/Ticketpool.png', '/images/Sinhala.png', '/images/Ticketpool.png'],
         sourceUrl: 'https://github.com/YourUsername/TicketPoolSystem',
         status: 'development',
         description:
-            'A real-time system for managing and tracking tickets across multiple queues. Features a live dashboard, prioritization logic, and user notifications.',
+            'A real-time system for managing and tracking tickets across multiple queues.',
         tools: ['Node.js', 'Express', 'Socket.io', 'MongoDB'],
     },
     {
@@ -40,8 +39,6 @@ const myProjects = [
             'A comprehensive hotel management platform featuring room reservations, staff scheduling, billing, and analytics dashboards for easy administration.',
         tools: ['Java', 'Spring Boot', 'MySQL'],
     },
-
-
 ];
 
 export default myProjects;

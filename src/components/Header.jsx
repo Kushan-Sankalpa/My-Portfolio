@@ -1,7 +1,8 @@
 // src/components/Header.jsx
-import  { useEffect } from 'react';
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({ onDownloadCV }) => {
     useEffect(() => {
         function myMenuFunction() {
             const menuBtn = document.getElementById('myNavMenu');
@@ -55,7 +56,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="nav-button">
-                <button className="btn">
+                <button className="btn" onClick={onDownloadCV}>
                     Download CV <i className="uil uil-file-alt"></i>
                 </button>
             </div>
@@ -64,6 +65,10 @@ const Header = () => {
             </div>
         </nav>
     );
+};
+
+Header.propTypes = {
+    onDownloadCV: PropTypes.func.isRequired,
 };
 
 export default Header;

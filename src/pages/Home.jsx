@@ -1,11 +1,33 @@
 // src/pages/Home.jsx
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Typed from 'typed.js';
 import ScrollReveal from 'scrollreveal';
 import ProjectCard from '../components/ProjectCard';
 import myProjects from '../data/projects';
+import emailjs from 'emailjs-com';
 
-const Home = () => {
+// Email sending function using EmailJS
+const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+        'service_nuougmk',    // Replace with your EmailJS Service ID
+        'template_lpg02o8',   // Replace with your EmailJS Template ID
+        e.target,
+        'DscVf_HwjL7hl_Vk9'    // Replace with your EmailJS User ID / Public Key
+    )
+        .then(
+            () => {
+                alert("Message sent successfully!");
+            },
+            () => {
+                alert("An error occurred, please try again.");
+            }
+        );
+    e.target.reset();
+};
+
+const Home = ({ onDownloadCV }) => {
     useEffect(() => {
         // NAV SHADOW ON SCROLL
         function headerShadow() {
@@ -44,7 +66,6 @@ const Home = () => {
         sr.reveal('.featured-text-btn', { delay: 200 });
         sr.reveal('.social_icons', { delay: 200 });
         sr.reveal('.featured-image', { delay: 300 });
-        // Reveal the project cards from the bottom
         sr.reveal('.work__card', { origin: 'bottom', delay: 300, interval: 200 });
         sr.reveal('.top-header', {});
 
@@ -74,8 +95,9 @@ const Home = () => {
                 const sectionHeight = current.offsetHeight;
                 const sectionTop = current.offsetTop - 50;
                 const sectionId = current.getAttribute('id');
-                const linkElem = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
-
+                const linkElem = document.querySelector(
+                    '.nav-menu a[href*=' + sectionId + ']'
+                );
                 if (linkElem) {
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                         linkElem.classList.add('active-link');
@@ -109,30 +131,49 @@ const Home = () => {
                     </div>
                     <div className="featured-text-info">
                         <p>
-                            Experienced frontend developer with a passion for creating visually stunning and
-                            user-friendly websites.
+                            Full Stack Developer passionate about scalable,
+                            high-performance web apps integrating seamless
+                            front-end design with robust back-end solutions
                         </p>
                     </div>
                     <div className="featured-text-btn">
-                        <a href="ex.html" className="btn blue-btn">
+                        <a href="#contact" className="btn blue-btn">
                             Hire Me
                         </a>
-                        <a href="ex.html" className="btn">
+                        <button onClick={onDownloadCV} className="btn">
                             Download CV <i className="uil uil-file-alt"></i>
-                        </a>
+                        </button>
                     </div>
                     <div className="social_icons">
-                        <div className="icon">
-                            <i className="uil uil-instagram"></i>
-                        </div>
-                        <div className="icon">
-                            <i className="uil uil-linkedin-alt"></i>
-                        </div>
-                        <div className="icon">
-                            <i className="uil uil-dribbble"></i>
-                        </div>
                         <a
-                            href="https://github.com/YourUsername"  /* Replace with your GitHub URL */
+                            href="https://www.instagram.com/YourUsername"  // Replace with your Instagram URL
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="icon">
+                                <i className="uil uil-instagram"></i>
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/YourUsername"  // Replace with your LinkedIn URL
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="icon">
+                                <i className="uil uil-linkedin-alt"></i>
+                            </div>
+                        </a>
+                        <a
+                            href="https://wa.me/YourNumber"  // Replace with your WhatsApp number in international format (e.g., "15551234567")
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="icon">
+                                <i className="uil uil-whatsapp"></i>
+                            </div>
+                        </a>
+                        <a
+                            href="https://github.com/YourUsername"  // Replace with your GitHub URL
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -163,14 +204,21 @@ const Home = () => {
                 <div className="row">
                     <div className="col">
                         <div className="about-info">
-                            <h3>My introduction</h3>
+                            <h3>My Introduction</h3>
                             <p>
-                                I am well-versed in HTML, CSS and JavaScript, and other cutting edge frameworks and
-                                libraries, which allows me to implement interactive features. Additionally, I have
-                                experience working with content management systems (CMS) like WordPress.
+                                Undergraduate Full Stack Developer with a robust foundation in modern
+                                web technologies and a passion for solving complex challenges.
+                                I excel at crafting engaging, responsive front-end experiences using
+                                HTML, CSS, and JavaScript, and have leveraged frameworks such as React and Angular
+                                (with TypeScript) to build dynamic, scalable user interfaces.
+                                On the back end, I architect secure solutions with Python,
+                                Java, and PHP utilizing frameworks like Spring Boot to ensure robust
+                                performance. Committed to continuous learning and innovation, I strive to
+                                develop efficient web applications that deliver seamless user experiences
+                                and drive impactful digital solutions
                             </p>
                             <div className="about-btn">
-                                <button className="btn">
+                                <button onClick={onDownloadCV} className="btn">
                                     Download CV <i className="uil uil-import"></i>
                                 </button>
                             </div>
@@ -186,9 +234,9 @@ const Home = () => {
                                 <span>CSS</span>
                                 <span>Bootstrap</span>
                                 <span>JavaScript</span>
-                                <span>Vue</span>
-                                <span>React</span>
+                                <span>TypeScript</span>
                                 <span>Angular</span>
+                                <span>React</span>
                             </div>
                         </div>
                         <div className="skills-box">
@@ -199,7 +247,7 @@ const Home = () => {
                                 <span>PHP</span>
                                 <span>JAVA</span>
                                 <span>Python</span>
-                                <span>C++</span>
+
                             </div>
                         </div>
                         <div className="skills-box">
@@ -208,8 +256,20 @@ const Home = () => {
                             </div>
                             <div className="skills-list">
                                 <span>MySQL</span>
-                                <span>PostgreSQL</span>
+                                <span>SQLite</span>
                                 <span>MongoDB</span>
+                                <span>H2 Database</span>
+                            </div>
+                        </div>
+                        <div className="skills-box">
+                            <div className="skills-header">
+                                <h3>Frameworks</h3>
+                            </div>
+                            <div className="skills-list">
+                                <span>Spring-Boot</span>
+                                <span>Angular</span>
+                                <span>React</span>
+
                             </div>
                         </div>
                     </div>
@@ -231,7 +291,7 @@ const Home = () => {
             {/* CONTACT SECTION */}
             <section className="section" id="contact">
                 <div className="top-header">
-                    <h1>Get in touch</h1>
+                    <h1>Get in Touch</h1>
                     <span>Do you have a project in your mind? Contact me here.</span>
                 </div>
                 <div className="row">
@@ -244,30 +304,86 @@ const Home = () => {
                                 <i className="uil uil-envelope"></i> Email: kushansankalpa717@gmail.com
                             </p>
                             <p>
-                                <i className="uil uil-phone"></i> Tel: +250 708 770 000
+                                <i className="uil uil-phone"></i> Tel: +94 76 580 7548
                             </p>
                         </div>
                     </div>
                     <div className="col">
-                        <div className="form-control">
+                        <form className="form-control" onSubmit={sendEmail}>
                             <div className="form-inputs">
-                                <input type="text" className="input-field" placeholder="Name" />
-                                <input type="text" className="input-field" placeholder="Email" />
+                                <input type="text" name="from_name" className="input-field" placeholder="Name" required />
+                                <input type="email" name="from_email" className="input-field" placeholder="Email" required />
                             </div>
                             <div className="text-area">
-                                <textarea placeholder="Message"></textarea>
+                                <textarea name="message" placeholder="Message" required></textarea>
                             </div>
                             <div className="form-button">
-                                <button className="btn">
+                                <button type="submit" className="btn">
                                     Send <i className="uil uil-message"></i>
                                 </button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </section>
+
+            {/* FOOTER SECTION */}
+            <footer>
+                <div className="top-footer">
+                    <p>Kushan Sankalpa</p>
+                </div>
+                <div className="middle-footer">
+                    <ul className="footer-menu">
+                        <li className="footer_menu_list">
+                            <a href="#home">Home</a>
+                        </li>
+                        <li className="footer_menu_list">
+                            <a href="#about">About</a>
+                        </li>
+                        <li className="footer_menu_list">
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li className="footer_menu_list">
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="footer-social-icons">
+                    <a href="https://www.instagram.com/YourUsername" target="_blank" rel="noopener noreferrer">
+                        <div className="icon">
+                            <i className="uil uil-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/YourUsername" target="_blank" rel="noopener noreferrer">
+                        <div className="icon">
+                            <i className="uil uil-linkedin-alt"></i>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/YourNumber" target="_blank" rel="noopener noreferrer">
+                        <div className="icon">
+                            <i className="uil uil-whatsapp"></i>
+                        </div>
+                    </a>
+                    <a href="https://github.com/YourUsername" target="_blank" rel="noopener noreferrer">
+                        <div className="icon">
+                            <i className="uil uil-github-alt"></i>
+                        </div>
+                    </a>
+                </div>
+                <div className="bottom-footer">
+                    <p>
+                        Copyright &copy;
+                        <a href="#home" style={{ textDecoration: 'none' }}> Kushan Sankalpa</a>
+                        - All rights reserved
+                    </p>
+                </div>
+            </footer>
         </main>
     );
+};
+
+Home.propTypes = {
+    onDownloadCV: PropTypes.func.isRequired,
 };
 
 export default Home;

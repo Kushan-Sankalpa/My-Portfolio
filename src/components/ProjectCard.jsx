@@ -1,11 +1,14 @@
 // src/components/ProjectCard.jsx
-import  { useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Popup from './Popup';
 
 const ProjectCard = ({ item }) => {
     const [showTooltip, setShowTooltip] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
+
+    // Use the `image` property if available; otherwise, fallback to the first image in `images`
+    const displayImage = item.image || (item.images && item.images.length > 0 ? item.images[0] : '');
 
     // Open the GitHub repository in a new tab
     const handleSourceClick = (e) => {
@@ -29,7 +32,7 @@ const ProjectCard = ({ item }) => {
                 </div>
             )}
 
-            <img src={item.image} alt={item.title} className="work__img" />
+            <img src={displayImage} alt={item.title} className="work__img" />
             <h3 className="work__title">{item.title}</h3>
 
             <div className="work__button-container">
@@ -65,7 +68,9 @@ ProjectCard.propTypes = {
     item: PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
+        // Remove isRequired here since the project might use `images` instead
+        image: PropTypes.string,
+        images: PropTypes.arrayOf(PropTypes.string),
         sourceUrl: PropTypes.string,
         status: PropTypes.string,
         description: PropTypes.string,

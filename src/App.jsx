@@ -1,16 +1,23 @@
 // src/App.jsx
-
+import  { useState } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Footer from './components/Footer';
-import './styles/App.css';
+import CVModal from './components/CVModal';
 
-export default function App() {
-  return (
-      <div className="container">
-        <Header />
-        <Home />
-        <Footer />
-      </div>
-  );
+function App() {
+    const [showCVModal, setShowCVModal] = useState(false);
+
+    const handleDownloadCV = () => {
+        setShowCVModal(true);
+    };
+
+    return (
+        <>
+            <Header onDownloadCV={handleDownloadCV} />
+            <Home onDownloadCV={handleDownloadCV} />
+            <CVModal show={showCVModal} onClose={() => setShowCVModal(false)} />
+        </>
+    );
 }
+
+export default App;
