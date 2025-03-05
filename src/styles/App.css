@@ -434,7 +434,7 @@ textarea {
 
 /* ----- FOOTER ----- */
 footer {
-    /* Expand width to compensate for the wrapper’s padding */
+    /* Expand width to compensate for the wrapper’s padding on desktop */
     width: calc(100% + 20vw);
     margin-left: -10vw;
     margin-right: -10vw;
@@ -554,6 +554,13 @@ footer {
     }
     .input-field {
         width: 100%;
+    }
+    /* Updated Footer for Mobile: Remove negative margins and adjust padding */
+    footer {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px 30px;
     }
 }
 
@@ -876,7 +883,8 @@ footer {
 .cv__back-btn:hover {
     background: var(--primary-color-hover);
 }
-/* ----- CV Modal Styling ----- */
+
+/* ----- CV Modal Styling (Second Block) ----- */
 .cv__overlay {
     position: fixed;
     top: 0;
@@ -963,4 +971,3 @@ footer {
 .nav-menu.responsive {
     left: 0;
 }
-
