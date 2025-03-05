@@ -188,12 +188,7 @@ const Home = ({ onDownloadCV }) => {
                         <img src="/images/profile3.PNG" alt="avatar" />
                     </div>
                 </div>
-                <div className="scroll-icon-box">
-                    <a href="#about" className="scroll-btn">
-                        <i className="uil uil-mouse-alt"></i>
-                        <p>Scroll Down</p>
-                    </a>
-                </div>
+                
             </section>
 
             {/* ABOUT SECTION */}
