@@ -58,7 +58,7 @@ const Home = ({ onDownloadCV }) => {
             origin: 'top',
             distance: '80px',
             duration: 2000,
-            reset: true,
+            reset: false,
         });
         sr.reveal('.featured-text-card', {});
         sr.reveal('.featured-name', { delay: 100 });
@@ -73,7 +73,7 @@ const Home = ({ onDownloadCV }) => {
             origin: 'left',
             distance: '80px',
             duration: 2000,
-            reset: true,
+            reset: false,
         });
         srLeft.reveal('.about-info', { delay: 100 });
         srLeft.reveal('.contact-info', { delay: 100 });
@@ -82,7 +82,7 @@ const Home = ({ onDownloadCV }) => {
             origin: 'right',
             distance: '80px',
             duration: 2000,
-            reset: true,
+            reset: false,
         });
         srRight.reveal('.skills-box', { delay: 100 });
         srRight.reveal('.form-control', { delay: 100 });
