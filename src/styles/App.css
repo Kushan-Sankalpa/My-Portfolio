@@ -279,7 +279,6 @@ nav {
     padding: 5em 0;
     min-height: 100vh;
 }
-/* Updated .row style to align columns at the top */
 .row {
     display: flex;
     justify-content: space-between;
@@ -384,7 +383,6 @@ h3 {
 .contact-info i {
     font-size: 18px;
 }
-/* Removed hover changes for contact-info so "Find Me" stays consistent */
 
 /* ----- CONTACT FORM ----- */
 .form-control {
@@ -434,7 +432,6 @@ textarea {
 
 /* ----- FOOTER ----- */
 footer {
-    /* Expand width to compensate for the wrapper’s padding on desktop */
     width: calc(100% + 20vw);
     margin-left: -10vw;
     margin-right: -10vw;
@@ -445,7 +442,6 @@ footer {
     padding: 40px 60px;
     box-shadow: 0 -2px 4px var(--shadow-color);
 }
-
 .top-footer p {
     font-size: 25px;
     font-weight: 600;
@@ -543,6 +539,10 @@ footer {
     .col {
         width: 100%;
     }
+    /* Hide the nav download button on smaller screens */
+    .nav-download-btn {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 540px) {
@@ -555,7 +555,7 @@ footer {
     .input-field {
         width: 100%;
     }
-    /* Updated Footer for Mobile: Remove negative margins and adjust padding */
+    /* Adjust footer for mobile */
     footer {
         width: 100%;
         margin-left: 0;
@@ -565,15 +565,11 @@ footer {
 }
 
 /* -------- NEW WORK CARD / POPUP STYLES -------- */
-
-/* Container for project cards */
 .work__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
-
-/* Project card */
 .work__card {
     display: flex;
     flex-direction: column;
@@ -590,8 +586,6 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-/* Hide status badge by default; show on hover */
 .work__card .project-status {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -608,8 +602,6 @@ footer {
 .work__card:hover .project-status {
     opacity: 1;
 }
-
-/* Status badge styling */
 .project-status.completed {
     background-color: #e0f7e9;
     color: green;
@@ -624,8 +616,6 @@ footer {
 .project-status.ongoing i {
     margin-right: 5px;
 }
-
-/* Work image and title */
 .work__img {
     width: 100%;
     border-radius: 1rem;
@@ -636,16 +626,12 @@ footer {
     margin-bottom: 0.5rem;
     color: #ffffff;
 }
-
-/* Button container */
 .work__button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
 }
-
-/* GitHub source button styling */
 .work__button {
     text-decoration: none;
     background: none;
@@ -660,8 +646,6 @@ footer {
     text-decoration: none;
     outline: none;
 }
-
-/* Enlarge the GitHub icon */
 .work__button-icon {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -670,8 +654,6 @@ footer {
 .work__button:hover .work__button-icon {
     transform: translateX(0.25rem);
 }
-
-/* Tooltip styling */
 .work__tooltip {
     position: absolute;
     bottom: 125%;
@@ -685,8 +667,6 @@ footer {
     opacity: 0.9;
     pointer-events: none;
 }
-
-/* "View More" button styling */
 .pop-view-more-button {
     display: inline-flex;
     align-items: center;
@@ -703,8 +683,6 @@ footer {
 .pop-view-more-button:hover i {
     transform: translateX(4px);
 }
-
-/* Popup backdrop and content */
 .work__popup {
     position: fixed;
     top: 0;
@@ -752,8 +730,6 @@ footer {
     margin-bottom: 1rem;
     color: var(--text-color-secondary);
 }
-
-/* ----- Popup Gallery Styling ----- */
 .popup__gallery {
     position: relative;
     text-align: center;
@@ -780,8 +756,6 @@ footer {
 .gallery-nav-btn:hover {
     background: var(--primary-color-hover);
 }
-
-/* ----- Fullscreen Overlay Styling ----- */
 .fullscreen-overlay {
     position: fixed;
     top: 0;
@@ -818,8 +792,6 @@ footer {
 .fullscreen-back-btn:hover {
     background: var(--primary-color-hover);
 }
-
-/* ----- CV Modal Styling ----- */
 .cv__overlay {
     position: fixed;
     top: 0;
@@ -834,7 +806,6 @@ footer {
     z-index: 10000;
     padding: 20px;
 }
-
 .cv__content {
     width: 100%;
     max-width: 800px;
@@ -843,13 +814,11 @@ footer {
     overflow: hidden;
     position: relative;
 }
-
 .cv__iframe {
     width: 100%;
     height: 80vh;
     border: none;
 }
-
 .cv__download-btn {
     display: block;
     text-align: center;
@@ -860,11 +829,9 @@ footer {
     font-weight: 600;
     transition: background 0.3s;
 }
-
 .cv__download-btn:hover {
     background: var(--primary-color-hover);
 }
-
 .cv__back-btn {
     position: absolute;
     top: 20px;
@@ -879,12 +846,9 @@ footer {
     transition: background 0.3s ease;
     z-index: 10001;
 }
-
 .cv__back-btn:hover {
     background: var(--primary-color-hover);
 }
-
-/* ----- CV Modal Styling (Second Block) ----- */
 .cv__overlay {
     position: fixed;
     top: 0;
@@ -899,7 +863,6 @@ footer {
     z-index: 10000;
     padding: 20px;
 }
-
 .cv__content {
     width: 100%;
     max-width: 800px;
@@ -911,7 +874,6 @@ footer {
     flex-direction: column;
     height: 90vh;
 }
-
 .cv__header {
     display: flex;
     justify-content: space-between;
@@ -920,17 +882,14 @@ footer {
     background: var(--primary-color);
     color: var(--color-white);
 }
-
 .cv__header h2 {
     font-size: 1.5rem;
     margin: 0;
 }
-
 .cv__header-buttons {
     display: flex;
     gap: 10px;
 }
-
 .cv__download-btn {
     background: var(--accent-color);
     color: var(--color-white);
@@ -941,11 +900,9 @@ footer {
     font-weight: 500;
     transition: background 0.3s ease;
 }
-
 .cv__download-btn:hover {
-    background: #d35400; /* Adjust if needed */
+    background: #d35400;
 }
-
 .cv__close-btn {
     background: transparent;
     border: 2px solid var(--color-white);
@@ -956,18 +913,15 @@ footer {
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
 }
-
 .cv__close-btn:hover {
     background: var(--color-white);
     color: var(--primary-color);
 }
-
 .cv__iframe {
     width: 100%;
     flex: 1;
     border: none;
 }
-
 .nav-menu.responsive {
     left: 0;
 }

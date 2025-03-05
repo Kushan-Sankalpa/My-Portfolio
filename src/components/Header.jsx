@@ -29,32 +29,25 @@ const Header = ({ onDownloadCV }) => {
             <div className="nav-menu" id="myNavMenu">
                 <ul className="nav_menu_list">
                     <li className="nav_list">
-                        <a href="#home" className="nav-link active-link">
-                            Home
-                        </a>
+                        <a href="#home" className="nav-link active-link">Home</a>
                         <div className="circle"></div>
                     </li>
                     <li className="nav_list">
-                        <a href="#about" className="nav-link">
-                            About
-                        </a>
+                        <a href="#about" className="nav-link">About</a>
                         <div className="circle"></div>
                     </li>
                     <li className="nav_list">
-                        <a href="#projects" className="nav-link">
-                            Projects
-                        </a>
+                        <a href="#projects" className="nav-link">Projects</a>
                         <div className="circle"></div>
                     </li>
                     <li className="nav_list">
-                        <a href="#contact" className="nav-link">
-                            Contact
-                        </a>
+                        <a href="#contact" className="nav-link">Contact</a>
                         <div className="circle"></div>
                     </li>
                 </ul>
             </div>
-            <div className="nav-button">
+            {/* Download CV button that will be hidden on smaller screens */}
+            <div className="nav-button nav-download-btn">
                 <button className="btn" onClick={onDownloadCV}>
                     Download CV <i className="uil uil-file-alt"></i>
                 </button>

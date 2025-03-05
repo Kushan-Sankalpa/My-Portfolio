@@ -1,5 +1,4 @@
-// src/pages/Home.jsx
-import  { useEffect } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Typed from 'typed.js';
 import ScrollReveal from 'scrollreveal';
@@ -146,7 +145,7 @@ const Home = ({ onDownloadCV }) => {
                     </div>
                     <div className="social_icons">
                         <a
-                            href="https://www.instagram.com/YourUsername"  // Replace with your Instagram URL
+                            href="https://www.instagram.com/YourUsername" 
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -155,7 +154,7 @@ const Home = ({ onDownloadCV }) => {
                             </div>
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/YourUsername"  // Replace with your LinkedIn URL
+                            href="https://www.linkedin.com/in/YourUsername"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -164,7 +163,7 @@ const Home = ({ onDownloadCV }) => {
                             </div>
                         </a>
                         <a
-                            href="https://wa.me/YourNumber"  // Replace with your WhatsApp number in international format (e.g., "15551234567")
+                            href="https://wa.me/YourNumber"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -173,7 +172,7 @@ const Home = ({ onDownloadCV }) => {
                             </div>
                         </a>
                         <a
-                            href="https://github.com/YourUsername"  // Replace with your GitHub URL
+                            href="https://github.com/YourUsername"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -188,7 +187,7 @@ const Home = ({ onDownloadCV }) => {
                         <img src="/images/profile3.PNG" alt="avatar" />
                     </div>
                 </div>
-                
+                {/* Scroll down button removed */}
             </section>
 
             {/* ABOUT SECTION */}
@@ -242,7 +241,6 @@ const Home = ({ onDownloadCV }) => {
                                 <span>PHP</span>
                                 <span>JAVA</span>
                                 <span>Python</span>
-
                             </div>
                         </div>
                         <div className="skills-box">
@@ -264,7 +262,6 @@ const Home = ({ onDownloadCV }) => {
                                 <span>Spring-Boot</span>
                                 <span>Angular</span>
                                 <span>React</span>
-
                             </div>
                         </div>
                     </div>
