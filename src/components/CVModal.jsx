@@ -1,5 +1,3 @@
-// src/components/CVModal.jsx
-
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 

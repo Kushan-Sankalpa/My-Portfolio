@@ -1,5 +1,4 @@
-// src/App.jsx
-import  { useState } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import CVModal from './components/CVModal';

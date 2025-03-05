@@ -1,4 +1,3 @@
-// src/components/ProjectCard.jsx
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Popup from './Popup';
@@ -50,6 +49,7 @@ const ProjectCard = ({ item }) => {
                 {showTooltip && item.status === 'development' && (
                     <div className="work__tooltip">Under Development</div>
                 )}
+
                 {/* "View More" button triggers the popup modal */}
                 <button
                     className="work__button pop-view-more-button"
@@ -68,7 +68,6 @@ ProjectCard.propTypes = {
     item: PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
-        // Remove isRequired here since the project might use `images` instead
         image: PropTypes.string,
         images: PropTypes.arrayOf(PropTypes.string),
         sourceUrl: PropTypes.string,

@@ -953,3 +953,8 @@ footer {
     flex: 1;
     border: none;
 }
+
+.nav-menu.responsive {
+    left: 0;
+}
+
