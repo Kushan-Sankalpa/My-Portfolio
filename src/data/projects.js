@@ -1,83 +1,88 @@
 const myProjects = [
+
     {
         id: 1,
-        title: 'Multi-Functional Calculator',
-        images: [
-            '/images/Multi-functional-Calculator/Calculator.png',
-            '/images/Multi-functional-Calculator/cal1.png',
-            '/images/Multi-functional-Calculator/cal2.png',
-            '/images/Multi-functional-Calculator/cal3.png',
-            '/images/Multi-functional-Calculator/cal4.png',
-            '/images/Multi-functional-Calculator/cal5.png',
-            '/images/Multi-functional-Calculator/cal6.png',
-            '/images/Multi-functional-Calculator/cal7.png',
-        ],
-        sourceUrl: 'https://github.com/YourUsername/CalculatorRepo',
+        title: 'Wali Pilla Sinhala Learning App',
+        image: '/images/Walipilla_Logo1.jpeg',
+        sourceUrl: 'https://github.com/VenukSyz/WaliPilla',
         status: 'completed',
         description:
-            'A versatile calculator offering basic arithmetic, advanced geometry, currency conversion, and scientific functions, built with HTML, CSS, and JavaScript.',
-        tools: ['HTML', 'CSS', 'JavaScript'],
+            'Gamified Sinhala learning app for preschool to grade 5 and the Sri Lankan diaspora, built with Flutter, Node.js, MongoDB, and Firebase for engaging, interactive language exercises.',
+        tools: ['Flutter', 'Nodejs', 'Firebase','MongoDB'],
     },
     {
         id: 2,
-        title: 'Real-Time Ticket Pool System',
-        images: ['/images/Ticketpool.png', '/images/Sinhala.png', '/images/Ticketpool.png'],
-        sourceUrl: 'https://github.com/YourUsername/TicketPoolSystem',
+        title: 'Personal AI Chat-Bot',
+        image: '/images/personalAIBOT.png',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/Personal-AI-Chatbot',
         status: 'completed',
         description:
-            'A real-time system for managing and tracking tickets across multiple queues.',
-        tools: ['Node.js', 'Express', 'Socket.io', 'MongoDB'],
+            'Real-time conversational agent built with Python, GPT-3.5-turbo, and Gradio, featuring dynamic context management, an interactive web interface, and robust error handling for API calls.',
+        tools: ['Python', 'OpenAI', 'Gradio Library'],
     },
     {
         id: 3,
-        title: 'Wali Pilla Sinhala Learning App',
-        image: '/images/Sinhala.png',
-        sourceUrl: 'https://github.com/YourUsername/WaliPillaSinhalaApp',
-        status: 'development',
+        title: 'Auto-Corrector AI ',
+        image: '/images/AutocorrectorAI2.png',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/AutoCorrectorAI-',
+        status: 'completed',
         description:
-            'An interactive app designed to teach Sinhala basics through lessons, quizzes, and speech recognition exercises.',
-        tools: ['React Native', 'Firebase', 'Speech API'],
+            'AI-powered text correction tool using a pre-trained T5 model, featuring a real-time Gradio interface and Hugging Face Transformers integration for advanced NLP.',
+        tools: ['Python', 'T5 Model', 'Gradio Library'],
     },
     {
         id: 4,
-        title: 'Hotel Management System',
-        image: '/images/Hotel.png',
-        sourceUrl: 'https://github.com/YourUsername/HotelManagementSystem',
-        status: 'development',
-        description:
-            'A comprehensive hotel management platform featuring room reservations, staff scheduling, billing, and analytics dashboards for easy administration.',
-        tools: ['Java', 'Spring Boot', 'MySQL'],
-    },
-    {
-        id: 5,
-        title: 'Personal Portfolio',
-        image: '/images/Hotel.png',
-        sourceUrl: 'https://github.com/YourUsername/HotelManagementSystem',
+        title: 'Walipilla Marketing Website',
+        image: '/images/Walipilla_Logo.jpeg',
+        sourceUrl: 'https://github.com/VenukSyz/Walipilla_Markerting_page',
         status: 'completed',
         description:
-            'A comprehensive hotel management platform featuring room reservations, staff scheduling, billing, and analytics dashboards for easy administration.',
-        tools: ['Java', 'Spring Boot', 'MySQL'],
+            'Walipilla Marketing is a sleek, modern website that highlights innovative digital marketing solutions designed to elevate your brand’s presence. It features a user-friendly layout, engaging visuals, and clear calls to action for seamless navigation.',
+        tools: ['React-Vite'],
+    },
+    {
+        id: 4,
+        title: 'Ticket Management System',
+        image: '/images/TicketManagement.png',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/Real_Time_Ticketing_System',
+        status: 'completed',
+        description:
+            'Real-time event ticketing system using a multithreaded producer-consumer pattern for dynamic ticket allocation. It features a responsive React frontend, a robust Spring Boot backend with SQLite integration, and scalable handling for high-volume transactions.',
+        tools: ['Java', 'Spring Boot', 'SQLite'],
     },
     {
         id: 6,
-        title: 'Walipilla Marketing Website',
-        image: '/images/Hotel.png',
-        sourceUrl: 'https://github.com/YourUsername/HotelManagementSystem',
+        title: 'Personal Portfolio',
+        image: '/images/portfolio.png',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/My-Portfolio',
         status: 'completed',
         description:
-            'A comprehensive hotel management platform featuring room reservations, staff scheduling, billing, and analytics dashboards for easy administration.',
-        tools: ['Java', 'Spring Boot', 'MySQL'],
+            'A portfolio website is a personal digital showcase that highlights your work, skills, and achievements through a clean, professional layout. It typically includes sections like an about page, project gallery, resume, and contact information to help visitors quickly understand your expertise and experience.',
+        tools: ['React-vite'],
     },
     {
         id: 7,
         title: 'Crypto Web App',
-        image: '/images/Hotel.png',
-        sourceUrl: 'https://github.com/YourUsername/HotelManagementSystem',
-        status: 'development',
+        image: '/images/Crypto_app.jpg',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/Crypto-Web-App',
+        status: 'completed',
         description:
-            'A comprehensive hotel management platform featuring room reservations, staff scheduling, billing, and analytics dashboards for easy administration.',
-        tools: ['Java', 'Spring Boot', 'MySQL'],
+            'A crypto webapp is a digital platform that lets users monitor cryptocurrency markets, manage their digital asset portfolios, and execute secure transactions—all through a user-friendly, real-time interface.',
+        tools: ['React-vite'],
     },
+    {
+
+        id: 8,
+        title: 'Multi-Functional Calculator',
+        image: '/images/MultiFunctionalCalculator.jpg',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/Multi--Functional-Calculator-',
+        status: 'completed',
+        description:'A versatile calculator offering basic arithmetic, advanced geometry, currency conversion, and scientific functions, built with HTML, CSS, and JavaScript.',
+        tools: ['HTML', 'CSS', 'JavaScript'],
+
+    },
+
+
 ];
 
 export default myProjects;

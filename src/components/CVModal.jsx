@@ -10,7 +10,7 @@ const CVModal = ({ show, onClose }) => {
                 <div className="cv__header">
                     <h2>My CV</h2>
                     <div className="cv__header-buttons">
-                        <a href="/cv/mycv.pdf" download className="cv__download-btn">
+                        <a href="/cv/BGK_Sankalpa_CV.pdf" download className="cv__download-btn">
                             Download
                         </a>
                         <button className="cv__close-btn" onClick={onClose}>
@@ -19,7 +19,7 @@ const CVModal = ({ show, onClose }) => {
                     </div>
                 </div>
                 <iframe
-                    src="/cv/mycv.pdf"
+                    src="/cv/BGK_Sankalpa_CV.pdf"
                     title="My CV"
                     className="cv__iframe"
                 ></iframe>
