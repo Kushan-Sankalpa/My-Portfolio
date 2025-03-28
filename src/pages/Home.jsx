@@ -145,7 +145,7 @@ const Home = ({ onDownloadCV }) => {
                     </div>
                     <div className="social_icons">
                         <a
-                            href="https://www.instagram.com/YourUsername" 
+                            href="https://www.instagram.com/_kushan_sankalpa_" 
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -154,7 +154,7 @@ const Home = ({ onDownloadCV }) => {
                             </div>
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/YourUsername"
+                            href="https://www.linkedin.com/in/kushan-sankalpa/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -163,7 +163,7 @@ const Home = ({ onDownloadCV }) => {
                             </div>
                         </a>
                         <a
-                            href="https://wa.me/YourNumber"
+                            href="https://wa.me/94773516451"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -172,7 +172,7 @@ const Home = ({ onDownloadCV }) => {
                             </div>
                         </a>
                         <a
-                            href="https://github.com/YourUsername"
+                            href="https://github.com/Kushan-Sankalpa"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -341,22 +341,22 @@ const Home = ({ onDownloadCV }) => {
                     </ul>
                 </div>
                 <div className="footer-social-icons">
-                    <a href="https://www.instagram.com/YourUsername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/_kushan_sankalpa_" target="_blank" rel="noopener noreferrer">
                         <div className="icon">
                             <i className="uil uil-instagram"></i>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/YourUsername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/kushan-sankalpa/" target="_blank" rel="noopener noreferrer">
                         <div className="icon">
                             <i className="uil uil-linkedin-alt"></i>
                         </div>
                     </a>
-                    <a href="https://wa.me/YourNumber" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/94773516451" target="_blank" rel="noopener noreferrer">
                         <div className="icon">
                             <i className="uil uil-whatsapp"></i>
                         </div>
                     </a>
-                    <a href="https://github.com/YourUsername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Kushan-Sankalpa" target="_blank" rel="noopener noreferrer">
                         <div className="icon">
                             <i className="uil uil-github-alt"></i>
                         </div>
