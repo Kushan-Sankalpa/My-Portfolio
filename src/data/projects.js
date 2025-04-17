@@ -10,6 +10,17 @@ const myProjects = [
             'Gamified Sinhala learning app for preschool to grade 5 and the Sri Lankan diaspora, built with Flutter, Node.js, MongoDB, and Firebase for engaging, interactive language exercises.',
         tools: ['Flutter', 'Nodejs', 'Firebase','MongoDB'],
     },
+
+    {
+        id: 2,
+        title: 'Task Hut : Task Manager Web App',
+        image: '/images/task_mng.png',
+        sourceUrl: 'https://github.com/Kushan-Sankalpa/Task-Hut---Task_Manager_App',
+        status: 'completed',
+        description:
+            'Task Hut is a simple full‑stack task manager app that lets you securely create, organize, and track your tasks',
+        tools: ['Spring Boot', 'Angular', 'MySQL','JWT'],
+    },
     {
         id: 2,
         title: 'Personal AI Chat-Bot',
